@@ -1,0 +1,20 @@
+# Lavori svolti
+
+Abbiamo creato una matrice di dimensioni ridotte, `2 [mosfet] x 2 [mosfet]`, su una veroboard ed abbiamo scritto un programma per controllarla.
+
+
+# Problemi riscontrati e soluzioni
+
+In seguito abbiamo notato che quando si cercano di accendere due led in diagonale, si accende tutto il quadrato della diagonale.
+Per risolvere tale problema abbiamo trovato la seguente soluzione:
+In pratica, si accendono tutti i LED che si vogliono accendere sulla riga, dopo si passa alla successiva e si spengono tutti quelli accesi precedentemente. Tra le due operazioni vi è un delay di 1 'ms'.
+
+# Punto della situazione rispetto alla pianificazione
+
+Non ancora pianificata
+
+# Programma di massima per la prossima giornata
+
+1. Iniziare la struttura in compensato
+2. Continuare la struttura di login
+

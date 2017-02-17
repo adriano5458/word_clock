@@ -26,11 +26,7 @@ Nell'ultima ora Ã¨ stato realizzato il diario, da Carlo.
 
 ## Problemi Riscontrati
 
-
-Nel test della matrice abbiamo notato che quando si cerca di accendere due led in diagonale, si accende tutto il quadrato della diagonale.
-Per risolvere tale problema abbiamo trovato la seguente soluzione:
-In pratica, si accendono tutti i LED che si vogliono accendere sulla riga, dopo si passa alla successiva e si spengono tutti quelli accesi precedentemente. Tra le due operazioni vi è un delay di 1 'ms'.
-
+Non sono stati ricontrati problemi.
 
 ## Punto della situazione rispetto alla pianificazione
 

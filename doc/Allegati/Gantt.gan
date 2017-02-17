@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="World_Clock_gantt" company="" webLink="" view-date="2017-01-14" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.8.1" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="World_Clock_gantt" company="" webLink="" view-date="2017-01-14" view-index="0" gantt-divider-location="474" resource-divider-location="300" version="2.8.1" locale="it">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="234" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="40" order="1"/>
-        <field id="tpd5" name="Data di fine" width="75" order="2"/>
-        <option id="taskLabelUp" value="name"/>
+        <field id="tpd3" name="Nome" width="274" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="81" order="1"/>
+        <field id="tpd5" name="Data di fine" width="115" order="2"/>
+        <option id="color.recent"><![CDATA[#009933 #00cc33 #00ff00]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nome" width="210" order="0"/>
@@ -53,8 +53,8 @@
             <task id="13" name="Design definitivo dell'orologio" meeting="false" start="2017-02-03" duration="7" complete="0" expand="true"/>
         </task>
         <task id="16" name="Implementazione" meeting="false" start="2017-03-24" duration="6" complete="0" expand="true">
-            <task id="20" name="Implementazione modello virtuale" meeting="false" start="2017-03-24" duration="6" complete="0" expand="true"/>
-            <task id="23" name="Implementazione modello fisico" meeting="false" start="2017-03-24" duration="6" complete="0" expand="true"/>
+            <task id="20" name="Implementazione modello virtuale" color="#009933" meeting="false" start="2017-03-24" duration="6" complete="0" expand="true"/>
+            <task id="23" name="Implementazione modello fisico" color="#009933" meeting="false" start="2017-03-24" duration="6" complete="0" expand="true"/>
         </task>
         <task id="3" name="Testing e debugging" meeting="false" start="2017-03-03" duration="10" complete="0" expand="true"/>
         <task id="5" name="Documentazione" color="#8cb6ce" meeting="false" start="2017-01-27" duration="16" complete="0" expand="true"/>

@@ -9,19 +9,19 @@
 
   - [Scopo](#scopo)
 
-1. [Analisi](#analisi)
+2. [Analisi](#analisi)
 
   - [Analisi del dominio](#analisi-del-dominio)
 
   - [Analisi e specifica dei requisiti](#analisi-e-specifica-dei-requisiti)
 
-1. [Use case](#use-case)
+3. [Use case](#use-case)
 
   - [Pianificazione](#pianificazione)
 
   - [Analisi dei mezzi](#analisi-dei-mezzi)
 
-1. [Progettazione](#progettazione)
+4. [Progettazione](#progettazione)
 
   - [Design dell’architettura del sistema](#design-dell’architettura-del-sistema)
 

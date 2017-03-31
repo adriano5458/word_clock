@@ -1,3 +1,6 @@
+# Progettazione
+
+
 1. [Introduzione](#introduzione)
 
   - [Informazioni sul progetto](#informazioni-sul-progetto)
@@ -30,61 +33,46 @@
 
 ### Informazioni sul progetto
 
-  In questo capitolo raccogliere le informazioni relative al progetto, ad esempio:
+Scuola SAMT - Scuola arti e mestieri Trevano
 
-  -   Allievo/i e docente/i coinvolti nel progetto e rispettivi ruoli,
+Sezione: Informatica
 
-  -   scuola ,sezione, materia/e,
+Materia: Modulo 306
 
-  -   date di inizio e termine di consegna,
+Allievi:
 
-  -   …
+- Samuel Dias Da Silva
+- Loris Bruno
+- Alessandro Narciso
+- Massimo Saia
+- Carlo Bogani
+
+
+Docente responsabile:
+
+- Adriano Barchi
+
+Data di inizio: 27.01.2017
+
+Data di fine: 11.05.2017
 
 ### Abstract
 
-  E’ una breve e accurata rappresentazione dei contenuti di un documento,
-  senza notazioni critiche o valutazioni. Lo scopo di un abstract efficace
-  dovrebbe essere quello di far conoscere all’utente il contenuto di base
-  di un documento e metterlo nella condizione di decidere se risponde ai
-  suoi interessi e se è opportuno il ricorso al documento originale.
+<!--Esempio di Abstract-->
 
-  Può contenere alcuni o tutti gli elementi seguenti:
-
-  -   **Background/Situazione iniziale**
-
-  -   **Descrizione del problema e motivazione**: Che problema ho cercato
-      di risolvere? Questa sezione dovrebbe includere l'importanza del
-      vostro lavoro, la difficoltà dell'area e l'effetto che potrebbe
-      avere se portato a termine con successo.
-
-  -   **Approccio/Metodi**: Come ho ottenuto dei progressi? Come ho
-      risolto il problema (tecniche…)? Quale è stata l’entità del mio
-      lavoro? Che fattori importanti controllo, ignoro o misuro?
-
-  -   **Risultati**: Quale è la risposta? Quali sono i risultati? Quanto è
-      più veloce, più sicuro, più economico o in qualche altro aspetto
-      migliore di altri prodotti/soluzioni?
-
-  Esempio di abstract:
-
-  > *As the size and complexity of today’s most modern computer chips
-  > increase, new techniques must be developed to effectively design and
-  > create Very Large Scale Integration chips quickly. For this project, a
-  > new type of hardware compiler is created. This hardware compiler will
-  > read a C++ program, and physically design a suitable microprocessor
-  > intended for running that specific program. With this new and powerful
-  > compiler, it is possible to design anything from a small adder, to a
-  > microprocessor with millions of transistors. Designing new computer
-  > chips, such as the Pentium 4, can require dozens of engineers and
-  > months of time. With the help of this compiler, a single person could
-  > design such a large-scale microprocessor in just weeks.*
+  > The cookbooks are very present in kitchens, but   
+  > sometimes those can be cumbersome.
+  > For solve this problem there is the use of tecnology,   
+  > some people use tablets, mobile phone, etc.
+  > We were requested to realize a site of recipes's management.
 
 ### Scopo
 
-  Lo scopo del progetto (scopi didattici/scopi operativi). Dovrebbe
-  descrivere il mandato, ma non vanno ricopiate le informazioni del
-  quaderno dei compiti (che va invece allegato).
-
+Lo scopo del progetto è quello di realizzare un orologio a parole. Questo dovrà
+essere presente in due modelli, uno fisico ed uno virtuale. Su quello fisico
+verrà mostrata l'ora scritta con delle parole retroilluminate, questo sarà
+controllato da quello virtuale sul quale verrà mostrata l'ora come nel modello
+fisico. La parte fisica deve sincronizzarsi alla parte virtuale tramite Wi-Fi.
 
 ## Analisi
 
@@ -116,110 +104,64 @@
 
 ### Analisi e specifica dei requisiti
 
-  Il progettista, dopo aver ricevuto il mandato, in collaborazione con il
-  committente redige una lista di requisiti. Durante questi incontri,
-  tramite interviste (da inserire nei diari), il progettista deve cercare
-  di rispondere alle seguenti domande:
-
-  -   Quali sono i bisogni del committente?
-
-  -   Quali funzioni deve svolgere il prodotto?
-
-  -   Come devono essere implementate?
-
-  -   L’utente, come vorrebbe/dovrebbe interagire con il prodotto?
-
-  -   Come verrà utilizzato il prodotto?
-
-  -   Che tipo di interfaccia si immagina?
-
-  -   Che prestazioni minime deve fornire il prodotto?
-
-  -   Che grado di sicurezza deve avere il prodotto?
-
-  -   …
-
-  In base alla lista dei requisiti e all’analisi degli stessi, il
-  progettista redige una *specifica dei requisiti* in cui elenca e
-  descrive in modo dettagliato quali sono le funzionalità che il prodotto
-  fornirà. La specifica dovrebbe essere abbastanza dettagliata da poter
-  essere utilizzata come base per lo sviluppo, ma non troppo; ad esempio
-  non dovrebbe contenere dettagli di implementazione, o definizioni
-  dettagliate dell’interfaccia grafica a meno che questi non siano
-  considerati cruciali. Non si deve scordare che i requisiti non
-  rappresentano delle attività bensì delle caratteristiche che il prodotto
-  dovrà possedere.
-
-
-  |ID  |REQ-012                                         |
+  |ID  |REQ-001                                         |
   |----|------------------------------------------------|
-  |**Nome**    |Creazione interfaccia |
+  |**Nome**    |Ergonomia |
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
-  |**Note**    |Si necessitano i permessi di root / Dipende dal requisito REQ-001 (Creazione DB)|
+  |**Note**    ||
   |            |**Sotto requisiti** |
-  |**001**      | Si necessita una maschera di login  |
-  |**002**      | Si dovranno poter immettere nuovi allievi                 |
-  |**003**      | Dovrà essere possibile la ricerca di allievi                   |
+  |**001**  | L’orologio dovrà mostrare le ore in italiano secondi il modo di espressione corrente  |
+  |**002**  | La posizione delle parole dovrà essere ottimizzata per una facile lettura   |
+  |**003**  | Dovrà avere una risoluzione minima di cinque minuti   |
+  |**004**  | L’intervallo tra i cinque minuti dovrà essere mostrato con una rappresentazione grafica intuitiva, risoluzione minima di un minuto. Considerare eventualmente anche una rappresentazione dei secondi.  |
 
+  |ID  |REQ-002                                         |
+  |----|------------------------------------------------|
+  |**Nome**    |Modello fisico |
+  |**Priorità**|1                     |
+  |**Versione**|1.0                   |
+  |**Note**    ||
+  |            |**Sotto requisiti** |
+  |**001**  | Il sistema di controllo del display a parole dovrà comunque già essere dimensionato, oppure prevedere un’espansione, per controllare un modello più grande di ca. 2m x 2m  |
+  |**002**  | Il modello fisico dovrà essere alimentato autonomamente ed essere sincronizzato automaticamente (tramite Wi-Fi sui diversi time server a disposizione)  |
+  |**003**  | In caso di interruzione di alimentazione, un RTC alimentato a batteria dovrà mantenere l’ora sincronizzata in modo che al ritorno dell’alimentazione, l’orologio sia già corretto  |
+  |**004**  | Il modello fisico dovrà poter essere controllato (accensione, correzione dell’ora) anche direttamente onboard  |
 
-
-**Spiegazione elementi tabella dei requisiti:**
-
-**ID**: identificativo univoco del requisito
-
-**Nome**: breve descrizione del requisito
-
-**Priorità**: indica l’importanza di un requisito nell’insieme del
-progetto, definita assieme al committente. Ad esempio poter disporre di
-report con colonne di colori diversi ha priorità minore rispetto al
-fatto di avere un database con gli elementi al suo interno. Solitamente
-si definiscono al massimo di 2-3 livelli di priorità.
-
-**Versione**: indica la versione del requisito. Ogni modifica del
-requisito avrà una versione aggiornata.
-
-Sulla documentazione apparirà solamente l’ultima versione, mentre le
-vecchie dovranno essere inserite nei diari.
-
-**Note**: eventuali osservazioni importanti o riferimenti ad altri
-requisiti.
-
-**Sotto requisiti**: elementi che compongono il requisito.
-
+  |ID  |REQ-003                                         |
+  |----|------------------------------------------------|
+  |**Nome**    |Modello virtuale |
+  |**Priorità**|1                     |
+  |**Versione**|1.0                   |
+  |**Note**    ||
+  |            |**Sotto requisiti** |
+  |**001**  | Il modello virtuale dovrà avere la stessa rappresentazione grafica di quello fisico |
+  |**002**  | Sincronizzazione con il modello fisico |
+  |**003**  | Tramite un accesso ristretto dovrà permettere di controllare il modello fisico e di testarne l’integrità permettendo l’accensione simultanea di tutti i led   |
 
 ### Use case
 
-I casi d’uso rappresentano l’interazione tra i vari attori e le
-funzionalità del prodotto.
+![Use Case](Allegati/use_case.png)
+
+In questo schema abbiamo rappresentato tutti i rispettivi casi dell'applicativo
+web (modello virtuale).
 
 ### Pianificazione
 
-Prima di stabilire una pianificazione bisogna avere almeno una vaga idea
-del modello di sviluppo che si intende adottare. In questa sezione
-bisognerà inserire il modello concettuale di sviluppo che si seguirà
-durante il progetto. Gli elementi di riferimento per una buona
-pianificazione derivano da una scomposizione top-down della problematica
-del progetto.
+![Gantt](Allegati/gantt.PNG)
 
-La pianificazione può essere rappresentata mediante un diagramma di
-Gantt.
-
-Se si usano altri metodi di pianificazione (es scrum), dovranno apparire
-in questo capitolo.
+Le attività evidenziate di colore verde nel diagramma di Gantt, sono in parallelo.
 
 ### Analisi dei mezzi
 
-Elencare e *descrivere* i mezzi disponibili per la realizzazione del
-progetto. Ricordarsi di sempre descrivere nel dettaglio le versioni e il
-modello di riferimento.
+Questo prodotto sarà compreso in un costrutto di legno per il modello fisico, ed
+in un web server per il modello virtuale.   
 
-SDK, librerie, tools utilizzati per la realizzazione del progetto e
-eventuali dipendenze.
+I mezzi per realizzare il tutto sono i seguenti:
 
-Su quale piattaforma dovrà essere eseguito il prodotto? Che hardware
-particolare è coinvolto nel progetto? Che particolarità e limitazioni
-presenta? Che hw sarà disponibile durante lo sviluppo?
+-
+-
+
 
 ## Progettazione
 

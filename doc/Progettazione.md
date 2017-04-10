@@ -78,29 +78,14 @@ fisico. La parte fisica deve sincronizzarsi alla parte virtuale tramite Wi-Fi.
 
 ### Analisi del dominio
 
-  Questo capitolo dovrebbe descrivere il contesto in cui il prodotto verrà
-  utilizzato, da questa analisi dovrebbero scaturire le risposte a quesiti
-  quali ad esempio:
+Con la tecnologia si fanno sempre più progressi, per questo con il tempo
+gli orologi analogici non verranno più usati o magari anche dimenticati.
+L'utilizzo del digitale sta avendo il soppravento in tutto e quindi per le strade o
+nelle strutture come case ed uffici possiamo trovare un orologio numerico.
 
-  -   Background/Situazione iniziale
+Il prodotto comprende una lettura diversa dal solito poiché l'ora verrà espressa
+a parole, questo sarà accessibile a chiunque.
 
-  -   Quale è e come è organizzato il contesto in cui il prodotto dovrà
-      funzionare?
-
-  -   Come viene risolto attualmente il problema? Esiste già un prodotto
-      simile?
-
-  -   Chi sono gli utenti? Che bisogni hanno? Come e dove lavorano?
-
-  -   Che competenze/conoscenze/cultura posseggono gli utenti in relazione
-      con il problema?
-
-  -   Esistono convenzioni/standard applicati nel dominio?
-
-  -   Che conoscenze teoriche bisogna avere/acquisire per poter operare
-      efficacemente nel dominio?
-
-  -   …
 
 ### Analisi e specifica dei requisiti
 
@@ -159,25 +144,33 @@ in un web server per il modello virtuale.
 
 I mezzi per realizzare il tutto sono i seguenti:
 
--
--
--
--
--
--
--
--
+- Arduino Ethernet: per il funzionamento del modello fisico
+
+- 195 LED da 25 mA: per illuminare le varie lettere
+
+- 195 resistenze da 390 Ohm: utili ai LED
+
+- Alimentatore 12 V: per alimentare il modello fisico
+
+- 2 tavole di  compensato 50cm X 50cm spesso 8mm: per la base della griglia
+
+- 4 tavole di compensato 297mm X 420mm spesso 4mm: per la base della griglia
+
+- 28 mosfet: per gestire la matrici di LED
+
+- Plexiglass 40cm X 40cm: utile al modello fisico
+
+- Arduino RTC module: modulo per il tempo reale
+
 -  
+
 -
 
+### Analisi dei costi
 
+I costi per la realizzazione del progetto sono 50 CHF / h(ora).
 
 ## Progettazione
-
-Questo capitolo descrive esaustivamente come deve essere realizzato il
-prodotto fin nei suoi dettagli. Una buona progettazione permette
-all’esecutore di evitare fraintendimenti e imprecisioni
-nell’implementazione del prodotto.
 
 ### Design dell’architettura del sistema
 

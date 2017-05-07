@@ -128,20 +128,6 @@ a parole, questo sarà accessibile a chiunque.
 
 ![Use Case](Allegati/use_case.png)
 
-Lo use case presenta tre attori principali: il sito, l'amministratore
-e l'utente ospite.
-
-Il primo attore è il sito che fornirà al modello fisico e all'utente ospite
-l'orario, inoltre, quest'ultimo avrà il controllo sul modello fisico.
-
-Il secondo potrà testare i led del modello fisico e modificarne pure l'orario, ma
-per fare ciò dovrà prima eseguire il login da amministratore sul sito.
-
-
-Il terzo attore é l'utente ospite che potrà leggere l'orario fornito dal primo
- attore, il sito.
-
-
 In questo schema abbiamo rappresentato tutti i rispettivi casi dell'applicativo
 web (modello virtuale).
 

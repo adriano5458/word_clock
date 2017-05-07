@@ -28,6 +28,10 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:MFN_STMicro
+LIBS:MFN_Atmel
+LIBS:Arduino_Uno_R3_From_Scratch-cache
+LIBS:Arduino_Uno_R3_From_Scratch
 LIBS:circuit-cache
 EELAYER 25 0
 EELAYER END

@@ -1,4 +1,4 @@
-# Progettazione
+# Word Clock
 
 
 1. [Introduzione](#introduzione)
@@ -160,66 +160,41 @@ I mezzi per realizzare il tutto sono i seguenti:
 
 - Plexiglass 40cm X 40cm: utile al modello fisico
 
-- Arduino RTC module: modulo per il tempo reale
+- 4 demultiplexer 4051
 
--  
-
--
+- Attrezzi utili (saldatore, scotch, ecc...)
 
 ### Analisi dei costi
 
 I costi per la realizzazione del progetto sono 50 CHF / h(ora).
+Sono previsite 100 ore lavorative, per un totale di 5000 CHF.
 
 ## Progettazione
 
 ### Design dell’architettura del sistema
 
-Descrive:
+![Modello fisico](Allegati/Modello1.png)
 
--   La struttura del programma/sistema lo schema di rete...
+Nell'immagine sovrastante è rappresenatato la versione fisica del Word Clock,
+nelle varie celle verranno visualizzate le lettere necessarie. Le misure prese
+sono quelle imposte nel mandato. Il contenitore è composto principalmente di
+compensato a parte le sue separazioni all'interno che sono di poli(qualcosa),
+quest'ultimo è stato usato per rendere il tutto più flessibile in modo da
+prevenire eventuali incidenti.
 
--   Gli oggetti/moduli/componenti che lo compongono.
+![Modello fisico](Allegati/Modello2.png)
 
--   I flussi di informazione in ingresso ed in uscita e le
-    relative elaborazioni. Può utilizzare *diagrammi di flusso dei
-    dati* (DFD).
+In immagine viene mostrato, nello specifico, l'altezza e lo spessore
+della parte superiore del supporto, le misure sono visibili nell'immagine.
 
--   Eventuale sitemap
+![Modello fisico](Allegati/Modello3.jpg)
 
-### Design dei dati e database
-
-Descrizione delle strutture di dati utilizzate dal programma in base
-agli attributi e le relazioni degli oggetti in uso.
-
-### Schema E-R, schema logico e descrizione.
-
-Se il diagramma E-R viene modificato, sulla doc dovrà apparire l’ultima
-versione, mentre le vecchie saranno sui diari.
+Qua viene rappresentato tutto il contenitore, in cui e ben visibile lo spazio
+sottostante che ospiterà la scheda Arduino, le due Veroboard e l'alimentatore.
 
 ### Design delle interfacce
 
-Descrizione delle interfacce interne ed esterne del sistema e
-dell’interfaccia utente. La progettazione delle interfacce è basata
-sulle informazioni ricavate durante la fase di analisi e realizzata
-tramite mockups.
-
-### Design procedurale
-
-Descrive i concetti dettagliati dell’architettura/sviluppo utilizzando
-ad esempio:
-
--   Diagrammi di flusso e Nassi.
-
--   Tabelle.
-
--   Classi e metodi.
-
--   Tabelle di routing
-
--   Diritti di accesso a condivisioni …
-
-Questi documenti permetteranno di rappresentare i dettagli procedurali
-per la realizzazione del prodotto.
+Inserire foto delle varie interfaccie del sito web.
 
 ## Implementazione
 
@@ -277,6 +252,11 @@ per la realizzazione del prodotto.
 
 ### Mancanze/limitazioni conosciute
 
+Le mancanze e limitazioni principali del prodotto finale sono:
+
+-
+-
+
 ## Consuntivo
 
 Consuntivo del tempo di lavoro effettivo e considerazioni riguardo le
@@ -285,14 +265,14 @@ consuntivo).
 
 ## Conclusioni
 
-Quali sono le implicazioni della mia soluzione? Che impatto avrà?
-Cambierà il mondo? È un successo importante? È solo un’aggiunta
-marginale o è semplicemente servita per scoprire che questo percorso è
-stato una perdita di tempo? I risultati ottenuti sono generali,
-facilmente generalizzabili o sono specifici di un caso particolare? ecc
+
 
 ### Sviluppi futuri
-  Migliorie o estensioni che possono essere sviluppate sul prodotto.
+
+Non vi è nessuna intenzione di effettuare dei miglioramenti al progetto,
+in futuro. Chiaramente l'idea principale di completarlo in modo che tutte
+le opzioni imposte siano portate a termine, perché è molto interessante
+vedere come si comporta quando sarà tutto completo.
 
 ### Considerazioni personali
   Cosa ho imparato in questo progetto? ecc
@@ -315,21 +295,10 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc
 
 ## Allegati
 
-Elenco degli allegati, esempio:
-
 -   Diari di lavoro
 
--   Codici sorgente/documentazione macchine virtuali
+-   Codici sorgente
 
--   Istruzioni di installazione del prodotto (con credenziali
-    di accesso) e/o di eventuali prodotti terzi
-
--   Documentazione di prodotti di terzi
-
--   Eventuali guide utente / Manuali di utilizzo
-
--   Mandato e/o Qdc
+-   Mandato / Quaderno dei compiti
 
 -   Prodotto
-
--   …

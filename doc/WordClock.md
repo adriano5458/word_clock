@@ -35,7 +35,7 @@
 
   - [Protocollo di test](#Protocollo-di-test)
 
-  - [Risultati test](#Risultati test)
+  - [Risultati test](#Risultati-test)
 
   - [Mancanze/limitazioni conosciute](#Mancanze/limitazioni-conosciute)
 
@@ -45,7 +45,7 @@
 
   - [Sviluppi futuri](#Sviluppi-futuri)
 
-  - [Considerazioni personali](#Considerazioni personali)
+  - [Considerazioni personali](#Considerazioni-personali)
 
 8. [Bibliografia](#Bibliografia)
 

@@ -27,6 +27,31 @@
 
   - [Design dei dati e database](#design-dei-dati-e-database)
 
+5. [Implementazione](#Implementazione)
+
+  - [Sviluppo](#Sviluppo)
+
+  - [Test](#Test)
+
+  - [Protocollo di test](#Protocollo-di-test)
+
+  - [Risultati test](#Risultati test)
+
+  - [Mancanze/limitazioni conosciute](#Mancanze/limitazioni-conosciute)
+
+6. [Consuntivo](#Consuntivo)
+
+7. [Conclusioni](#Conclusioni)
+
+  - [Sviluppi futuri](#Sviluppi-futuri)
+
+  - [Considerazioni personali](#Considerazioni personali)
+
+8. [Bibliografia](#Bibliografia)
+
+  - [Sitografia](#Sitografia)
+
+9. [Allegati](#Allegati)
 
 
 ## Introduzione
@@ -198,6 +223,8 @@ Inserire foto delle varie interfaccie del sito web.
 
 ## Implementazione
 
+### Sviluppo
+
 ## Test
 
 ### Protocollo di test
@@ -264,8 +291,6 @@ differenze rispetto alla pianificazione (cap 1.7) (ad esempio Gannt
 consuntivo).
 
 ## Conclusioni
-
-
 
 ### Sviluppi futuri
 

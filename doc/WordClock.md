@@ -234,3 +234,116 @@ ad esempio:
 
 Questi documenti permetteranno di rappresentare i dettagli procedurali
 per la realizzazione del prodotto.
+
+## Implementazione
+
+## Test
+
+### Protocollo di test
+
+|Test Case      | TC-001                               |
+|---------------|--------------------------------------|
+|**Nome**       ||
+|**Riferimento**|REQ-0                               |
+|**Descrizione**| |
+|**Prerequisiti**| |
+|**Procedura**     |  |
+|**Risultati attesi** |risultati |
+
+|Test Case      | TC-002                               |
+|---------------|--------------------------------------|
+|**Nome**       ||
+|**Riferimento**|REQ-0                               |
+|**Descrizione**| |
+|**Prerequisiti**| |
+|**Procedura**     |  |
+|**Risultati attesi** |risultati |
+
+|Test Case      | TC-003                               |
+|---------------|--------------------------------------|
+|**Nome**       ||
+|**Riferimento**|REQ-0                               |
+|**Descrizione**| |
+|**Prerequisiti**| |
+|**Procedura**     |  |
+|**Risultati attesi** |risultati |
+
+|Test Case      | TC-004                               |
+|---------------|--------------------------------------|
+|**Nome**       ||
+|**Riferimento**|REQ-0                               |
+|**Descrizione**| |
+|**Prerequisiti**| |
+|**Procedura**     |  |
+|**Risultati attesi** |risultati |
+
+|Test Case      | TC-005                               |
+|---------------|--------------------------------------|
+|**Nome**       ||
+|**Riferimento**|REQ-0                               |
+|**Descrizione**| |
+|**Prerequisiti**| |
+|**Procedura**     |  |
+|**Risultati attesi** |risultati |
+
+
+### Risultati test
+
+### Mancanze/limitazioni conosciute
+
+## Consuntivo
+
+Consuntivo del tempo di lavoro effettivo e considerazioni riguardo le
+differenze rispetto alla pianificazione (cap 1.7) (ad esempio Gannt
+consuntivo).
+
+## Conclusioni
+
+Quali sono le implicazioni della mia soluzione? Che impatto avrà?
+Cambierà il mondo? È un successo importante? È solo un’aggiunta
+marginale o è semplicemente servita per scoprire che questo percorso è
+stato una perdita di tempo? I risultati ottenuti sono generali,
+facilmente generalizzabili o sono specifici di un caso particolare? ecc
+
+### Sviluppi futuri
+  Migliorie o estensioni che possono essere sviluppate sul prodotto.
+
+### Considerazioni personali
+  Cosa ho imparato in questo progetto? ecc
+
+## Bibliografia
+
+### Sitografia
+
+1.  URL del sito (se troppo lungo solo dominio, evt completo nel
+    diario),
+
+2.  Eventuale titolo della pagina (in italico),
+
+3.  Data di consultazione (GG-MM-AAAA).
+
+**Esempio:**
+
+-   http://standards.ieee.org/guides/style/section7.html, *IEEE
+    Standards Style Manual*, 07-06-2008.
+
+## Allegati
+
+Elenco degli allegati, esempio:
+
+-   Diari di lavoro
+
+-   Codici sorgente/documentazione macchine virtuali
+
+-   Istruzioni di installazione del prodotto (con credenziali
+    di accesso) e/o di eventuali prodotti terzi
+
+-   Documentazione di prodotti di terzi
+
+-   Eventuali guide utente / Manuali di utilizzo
+
+-   Mandato e/o Qdc
+
+-   Prodotto
+
+-   …

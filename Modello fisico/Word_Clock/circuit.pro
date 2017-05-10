@@ -1,4 +1,4 @@
-update=2017 May 07, Sunday 13:11:53
+update=2017 May 10, Wednesday 11:35:28
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,13 @@ LibName31=/home/loriga/Downloads/arduino_uno_r3_from_scratch-master/MFN_STMicro
 LibName32=/home/loriga/Downloads/arduino_uno_r3_from_scratch-master/MFN_Atmel
 LibName33=/home/loriga/Downloads/arduino_uno_r3_from_scratch-master/Arduino_Uno_R3_From_Scratch-cache
 LibName34=/home/loriga/Downloads/arduino_uno_r3_from_scratch-master/Arduino_Uno_R3_From_Scratch
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=../../doc/Allegati/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

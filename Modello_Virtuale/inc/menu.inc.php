@@ -7,17 +7,17 @@
     <div class="row text-center">
       <?php if(strtolower($GLOBALS['current_page']) != "it"){ ?>
       <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
-        <a href="/it" class="btn btn-default">Italiano</a>
+        <a href="../it" class="btn btn-default">Italiano</a>
       </div>
       <?php } ?>
       <?php if(strtolower($GLOBALS['current_page']) != "de"){ ?>
       <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
-        <a href="/de" class="btn btn-default">Deutsch</a>
+        <a href="../de" class="btn btn-default">Deutsch</a>
       </div>
       <?php } ?>
       <?php if(strtolower($GLOBALS['current_page']) != "fr"){ ?>
       <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
-        <a href="/fr" class="btn btn-default">Francais</a>
+        <a href="../fr" class="btn btn-default">Francais</a>
       </div>
       <?php } ?>
     </div>

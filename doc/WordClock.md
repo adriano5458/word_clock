@@ -231,11 +231,30 @@ della parte superiore del supporto, le misure sono visibili nell'immagine.
 Qua viene rappresentato tutto il contenitore, in cui e ben visibile lo spazio
 sottostante che ospiterà la scheda Arduino, le due Veroboard e l'alimentatore.
 
+
+#### Matrice
+
+Per controllare singolarmente tutti i led abbiamo progettato una matrice a mosfet.
+I mosfet sono degli switch elettronici che dispongono di 3 pin.
+Il primo pin è il gate il quale, tramite un segnale digitale, può cambiare lo stato
+dello switch. Mettendo un `1` lo switch si abiliterà lasciando passare la la corrente
+che gli arriva dal secondo pin al terzo pin.
+
+Utilizzando i mosfet sia sul polo negativo che su quello positivo, si potranno
+ selezionare le singole celle
+
+Questi sono posizionati all'inizio di ogni colonna, ed alla fine di ogni riga.
+
+![Modello fisico](Allegati/circuit.svg)
+
+
 ### Design delle interfacce
 
 Inserire foto delle varie interfaccie del sito web.
 
 ## Implementazione
+
+
 
 ### Sviluppo
 

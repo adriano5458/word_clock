@@ -153,20 +153,6 @@ a parole, questo sarà accessibile a chiunque.
 
 ![Use Case](Allegati/use_case.png)
 
-Lo use case presenta tre attori principali: il sito, l'amministratore
-e l'utente ospite.
-
-Il primo attore è il sito che fornirà al modello fisico e all'utente ospite
-l'orario, inoltre, quest'ultimo avrà il controllo sul modello fisico.
-
-Il secondo potrà testare i led del modello fisico e modificarne pure l'orario, ma
-per fare ciò dovrà prima eseguire il login da amministratore sul sito.
-
-
-Il terzo attore é l'utente ospite che potrà leggere l'orario fornito dal primo
- attore, il sito.
-
-
 In questo schema abbiamo rappresentato tutti i rispettivi casi dell'applicativo
 web (modello virtuale).
 
@@ -231,44 +217,111 @@ della parte superiore del supporto, le misure sono visibili nell'immagine.
 Qua viene rappresentato tutto il contenitore, in cui e ben visibile lo spazio
 sottostante che ospiterà la scheda Arduino, le due Veroboard e l'alimentatore.
 
-
-#### Matrice
-
-Per controllare singolarmente tutti i led abbiamo progettato una matrice a mosfet.
-I mosfet sono degli switch elettronici che dispongono di 3 pin.
-Il primo pin è il gate il quale, tramite un segnale digitale, può cambiare lo stato
-dello switch. Mettendo un `1` lo switch chiuderà il circuito lasciando passare
-la corrente che gli arriva secondo pin al terzo pin.
-
-
-Questi sono posizionati all'inizio di ogni colonna, ed alla fine di ogni riga.
-Tutti i mosfet collegati alle colonne sono direttamente collegate alla corrente
-e al polo positivo dei vari diodi.
-Anche nelle varie righe vi é un mosfet alla quale vi sono collegati tutti i poli
-negativi dei led nella riga corrispondente. Il polo negativo del mosfet in questo
-caso viene collegato direttamente al polo negativo.
-Utilizzando un alimentatore esterno per i led e controllando i mosfet da Arduino,
-bisognerà in seguito sincronizzare il polo negativo, perciò oltre a collegare il
-`GND` dell'alimentatore esterno, bisognerà collegare anche il `GND` di arduino.
-
-Il fatto che la corrente percorre la strada più corta per arrivare a massa si
-può sfruttare per selezionare i singoli led.
-Per esempio: per accendere il primo led a sinistra della matrice basterà mettere
-un `1` alla prima colonna ed un `1` alla prima riga.
-
-
-![Modello fisico](Allegati/circuit.svg)
-
-
 ### Design delle interfacce
 
-Inserire foto delle varie interfaccie del sito web.
+Nel modello virtuale l'interfaccia grafica si presenta nel seguente modo:
+* Al centro si trova l'orologio a parole.  
+* Alla sinisra di questo ci sono i pallini che indicano i secondi. Ogni pallino equivale a 5 secondi; il pallino più in alto è 5 secondi.  
+* Sopra alle lettere c'è l'indicatore dei minuti. Il più e il meno indicano se aggiungere o togliere minuti all'orario letto dalle parole. Ogni pallino vale 1 minuto; il pallino più a sinistra indica che si deve aggiungere/togliere 1 minuto, mentre quello più a destra indica che si devono aggiungere/togliere 4 minuti.  
+* In alto a sinistra si trova il menu, nel quale si potrà modificare la lingua e i colori dell'interfaccia. Ci saranno dei temi già preimpostati.
+* In alto a destra si trova il pulsante per effettuare il login/logout.  
+
+Le immagini seguenti mostrano l'interfaccia nelle diverse lingue:
+
+### Italiano  
+![Interfaccia italiano](Allegati/SchemaIT.png)  
+
+### Tedesco  
+![Interfaccia tedesco](Allegati/SchemaDE.png)  
+
+### Francese   
+![Interfaccia francese](Allegati/SchemaFR.png)  
+
+Il menu è diviso in 3 parti prinipali:
+* LINGUA: per passare da una lingua ad un'altra
+* TEMI PREDEFINITI: per impostare i colori dell'interfaccia tramite dei temi preimpostati
+* COLORI PERSONALIZZATI: per impostare i colori dell'interfaccia come si vuole
+
+Una volta effettuato il login apparirà nel menu la voce "Gestisci LED", nella quale si potrà abilitare la gestione dei singoli LED sincronizati con il modello fisco.
+
+SCREEN MENU PROGETTAZIONE
 
 ## Implementazione
 
+### Modello virtuale
+Per il modello virtuale abbiamo iniziato con un WordClock di base già fatto in un altro progetto.
+Questo si presentava nel seguente modo:  
 
+![Interfaccia iniziale](Allegati/WordClockInizio.png)
 
-### Sviluppo
+Abbiamo dovuto modificare la struttura im modo da renderla come illustrata nella progettazione:
+
+![Interfaccia italiano](Allegati/It.png)
+
+Per far sì che la tabella delle lettere rimanga al centro abbiamo creato una funzione che la riadatta a dipendenza dello spazio a disposizione: se la finestra è più larga che alta, la tabella si ridimensiona rispetto all'altezza:  
+
+![Orizzontale](Allegati/Orizzontale.png)
+
+mentre se la finestra è più alta che larga la tabella si ridimensiona rispetto alla larghezza:  
+
+![Verticale](Allegati/Verticale.png)
+
+La struttura principale è una tabella 15x13.  
+Ogni riga possiede un id che va da 0 a 120 con intervalli di 10. All'inizio di ogni riga di lettere si trova il pallino dei secondi creato con &#8226.   
+Questo è un esempio di riga:  
+
+```html
+<tr id="10">
+  <td><span class="sec_point" id="s5"  title="5 secondi">&#8226</span></td>
+  <td>È</td>
+  <td>S</td>
+  <td>O</td>
+  <td>N</td>
+  <td>O</td>
+  <td>T</td>
+  <td>L</td>
+  <td>E</td>
+  <td>I</td>
+  <td>L</td>
+  <td>'</td>
+  <td>U</td>
+  <td>N</td>
+  <td>A</td>
+</tr>
+```
+Per "accendere" le lettere che mostrano l'ora attuale abbiamo creato una funzione che riceve come parametri la riga, l'indice da cui iniziare a colorare e quello di fine e il colore da applicare.  
+La funzione è la seguente:
+
+```javascript  
+function genWord(row, min, max, color) {
+  // Prendo tutti gli elemnti della riga
+  var els = document.getElementById(row).getElementsByTagName("td");
+  for(var x = min+1; x <= max+1; x++){
+    // Applico il colore alle lettere da accendere / spegnere
+    els[x].style.color = color;
+    if(color == on) els[x].style.textShadow = "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)";
+    if(color == off) els[x].style.textShadow = "";
+  }
+}
+```
+
+Come da progettazione il menu è composto da 3 sezioni.  
+La prima sezione è quella della lingua. In questa sezione si può passare dalla pagina di una lingua a quella di una della altre due disponibili.  
+La seconda sezione permette di cambiare i colori dell'interfaccia tramite tre temi predefiniti.  
+La terza sezione permette di cambiare i colori dell'interfaccia definendo i colori dello sfondo, delle lettere accese e di quelle spente, tramite degli input RGB.
+
+AGGIORNARE IMG  
+
+![Menu](Allegati/Menu.png)
+
+Una volta effettuato il login apparirà nel menu la sezione per poter gesire i LED del modello fisico e in alto a destra appariranno i bottoni per cambiare la password dell'account ed effettuare il logout.
+
+IMG SEZIONE MANAGEMENT
+
+IMG BOTTONI LOGOUT E CAMBIO PWD
+
+### Modello fisico
+
 
 ## Test
 
@@ -276,30 +329,30 @@ Inserire foto delle varie interfaccie del sito web.
 
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|
-|**Nome**       ||
-|**Riferimento**|REQ-0                               |
-|**Descrizione**| |
+|**Nome**       |Modello virtuale con la stessa rappresentazione di quello fisico|
+|**Riferimento**|REQ-003                               |
+|**Descrizione**|Controllare che il modello virtuale abbia la stessa rappresentazione di quello virtuale (per la lingua italiana) |
 |**Prerequisiti**| |
-|**Procedura**     |  |
-|**Risultati attesi** |risultati |
+|**Procedura**     |1. Nel sito, andare, se non si è già nella pagina del WordClock in italiano tramite il menu sulla sinistra. <br> 2. Controllare che la disposizione delle lettere sia uguale a quella rapresentata nel modello fisico.  |
+|**Risultati attesi** |Non ci deve essere nessuna differenza tra i due. |
 
 |Test Case      | TC-002                               |
 |---------------|--------------------------------------|
-|**Nome**       ||
-|**Riferimento**|REQ-0                               |
-|**Descrizione**| |
-|**Prerequisiti**| |
-|**Procedura**     |  |
-|**Risultati attesi** |risultati |
+|**Nome**       |Sincronizzazione virtuale-fisico|
+|**Riferimento**|REQ-003                               |
+|**Descrizione**|Controllare che il modello fisico e quello virtuale siano sincronizzati  |
+|**Prerequisiti**|Bisogna essere nella pagina in italiano |
+|**Procedura**     |1. Nel sito, andare, se non si è già nella pagina del WordClock in italiano tramite il menu sulla sinistra. <br> 2. Controllare che i LED accesi nel modello fisico siano gli stessi che sono colorati nel modello virtuale  |
+|**Risultati attesi** |I LED accesi nel modello fisico devono essere gli stessi che sono colorati nel modello virtuale. |
 
 |Test Case      | TC-003                               |
 |---------------|--------------------------------------|
-|**Nome**       ||
-|**Riferimento**|REQ-0                               |
-|**Descrizione**| |
+|**Nome**       |Accesso ristretto per controllare il modello fisico|
+|**Riferimento**|REQ-003                               |
+|**Descrizione**|Effettuare il login e testare l'accensione dei LED tramite il modello virtuale |
 |**Prerequisiti**| |
-|**Procedura**     |  |
-|**Risultati attesi** |risultati |
+|**Procedura**     |1. Cliccare sul pulsante di login in alto a destra.<br>2. Mettere le credenziali.<br>3. Cliccare sulle lettere  per cambiarne lo stato e verificare che lo stato cambi pure nel modello fisico.<br>4. Provare ad accendere tutti i LED del modello fisico tramite interfaccia virtuale.  |
+|**Risultati attesi** |Cambiando lo stato di una lettera nel modello virtuale, viene cambiato lo stato di quella stessa lettera pure nel modello fisico. |
 
 |Test Case      | TC-004                               |
 |---------------|--------------------------------------|

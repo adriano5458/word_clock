@@ -189,6 +189,16 @@ I mezzi per realizzare il tutto sono i seguenti:
 
 - Attrezzi utili (saldatore, scotch, ecc...)
 
+- Linguaggi HTML e CSS: utilizzati per l'interfaccia grafica
+
+- Linguaggi Php, MySQL, JavaScript: utilizzati per la gestione del sito
+
+- GanttProject 2.8.1 Pilsen, software utilizzato per sviluppare il diagramma di Gantt
+
+- Adobe Photoshop CC 2017: utilizzato per realizzare l'immagine scalare
+
+- KiCad 4.0.6: utilizzato per realizzare alcuni schemi elettrici
+
 ### Analisi dei costi
 
 I costi per la realizzazione del progetto sono 50 CHF / h(ora).
@@ -224,7 +234,14 @@ Nel modello virtuale l'interfaccia grafica si presenta nel seguente modo:
 * Alla sinisra di questo ci sono i pallini che indicano i secondi. Ogni pallino equivale a 5 secondi; il pallino più in alto è 5 secondi.  
 * Sopra alle lettere c'è l'indicatore dei minuti. Il più e il meno indicano se aggiungere o togliere minuti all'orario letto dalle parole. Ogni pallino vale 1 minuto; il pallino più a sinistra indica che si deve aggiungere/togliere 1 minuto, mentre quello più a destra indica che si devono aggiungere/togliere 4 minuti.  
 * In alto a sinistra si trova il menu, nel quale si potrà modificare la lingua e i colori dell'interfaccia. Ci saranno dei temi già preimpostati.
-* In alto a destra si trova il pulsante per effettuare il login/logout.  
+* In alto a destra si trova il pulsante per effettuare il login/logout.
+
+Questa è l'interfaccia del modello virtuale che verrà visualizzata dall'utente
+che non ha effettuato il login. Nel parte centrale saranno mostrate le lettere, a
+differenza della lingua selezionata.
+
+
+![Modello fisico lettere ](Allegati/Design1.PNG)
 
 Le immagini seguenti mostrano l'interfaccia nelle diverse lingue:
 
@@ -242,9 +259,37 @@ Il menu è diviso in 3 parti prinipali:
 * TEMI PREDEFINITI: per impostare i colori dell'interfaccia tramite dei temi preimpostati
 * COLORI PERSONALIZZATI: per impostare i colori dell'interfaccia come si vuole
 
-Una volta effettuato il login apparirà nel menu la voce "Gestisci LED", nella quale si potrà abilitare la gestione dei singoli LED sincronizati con il modello fisco.
+Una volta effettuato il login apparirà nel menu la voce "Gestisci LED", nella quale si potrà abilitare la gestione dei singoli LED sincronizzati con il modello fisco.
 
-SCREEN MENU PROGETTAZIONE
+Questa è l'interfaccia di Login, per accerdere bisognerà inserire username e
+password.
+
+![Modello fisico lettere ](Allegati/Sign-in.PNG)
+
+Questa è l'interfaccia del modello virtuale che verrà visualizzata dall'utente
+che ha effettuato il login. Verrà aggiunto il bottone utile per il cambio password.
+
+![Modello fisico lettere ](Allegati/Design2.PNG)
+
+![Modello fisico lettere ](Allegati/change.PNG)
+
+Questa è l'interfaccia del cambio di password.
+
+![Modello fisico lettere ](Allegati/menuSito.PNG)
+
+Infine, questa è l'interfaccia del menu, sarà accessibile con il tasto in alto a
+sinistra nella pagina princiaple, questo permette di :
+
+- cambiare lingua
+
+- cambiare il tema dei colori, sono già presenti dei temi predefiniti
+
+- personalizzazione dei colori
+
+L'interfaccia per visualizzare l'ora corrente, utile al modello fisico è
+stata realizzata un'immagine scalare, su misura.
+
+![Modello fisico lettere ](Allegati/WordClockLettere.png)
 
 ## Implementazione
 
@@ -390,6 +435,10 @@ consuntivo).
 
 ## Conclusioni
 
+Siamo molti soddisfatti di dove siamo riusciti ad arrivare con le nostre conosce. Purtroppo il progetto è completo per metà e mancano un paio di cose importanti. Siamo riusciti bene a dividerci il lavoro e quindi non è mai capitato che qualcuno rimanesse senza far niente. Nella parte di integrazione di Arduino con il sito web abbiamo
+riscontrato delle difficoltà, per questo non abbiamo potuto realizzare molto
+legato a questo.
+
 ### Sviluppi futuri
 
 Non vi è nessuna intenzione di effettuare dei miglioramenti al progetto,
@@ -398,23 +447,23 @@ le opzioni imposte siano portate a termine, perché è molto interessante
 vedere come si comporta quando sarà tutto completo.
 
 ### Considerazioni personali
-  Cosa ho imparato in questo progetto? ecc
+
+Questo progetto mi è servito molto ad affinare le capacità di lavoro con i vari
+linguaggi di programmazione, ho scoperto molte cose in questo progetto di cui
+l'utilizzo di Arduino Ethernet ed il funzionamento di alcuni componenti
+elettronici.(Carlo)
+
+(parte Alessandro)
+(parte Loris)
+(parte Samuel)
+(parte Massimo)
 
 ## Bibliografia
 
 ### Sitografia
 
-1.  URL del sito (se troppo lungo solo dominio, evt completo nel
-    diario),
+-   http://www.ganttproject.biz/, *GanttProject*, 07-06-2008.
 
-2.  Eventuale titolo della pagina (in italico),
-
-3.  Data di consultazione (GG-MM-AAAA).
-
-**Esempio:**
-
--   http://standards.ieee.org/guides/style/section7.html, *IEEE
-    Standards Style Manual*, 07-06-2008.
 
 ## Allegati
 
@@ -425,3 +474,11 @@ vedere come si comporta quando sarà tutto completo.
 -   Mandato / Quaderno dei compiti
 
 -   Prodotto
+
+Alcuni di questi allegati sono recapitabili su GitHub al seguente indirizzo
+
+https://github.com/diasam/word_clock/
+
+Il sito web è disponibile al seguente indirizzo
+
+http://sv-104-web01.cpt.local/

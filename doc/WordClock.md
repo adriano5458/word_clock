@@ -229,13 +229,13 @@ Nel modello virtuale l'interfaccia grafica si presenta nel seguente modo:
 Le immagini seguenti mostrano l'interfaccia nelle diverse lingue:
 
 ### Italiano  
-![Interfaccia italiano](Allegati/SchemaIT.png)  
+![Interfaccia italiano](Allegati/SchemaIT.PNG)  
 
 ### Tedesco  
-![Interfaccia tedesco](Allegati/SchemaDE.png)  
+![Interfaccia tedesco](Allegati/SchemaDE.PNG)  
 
 ### Francese   
-![Interfaccia francese](Allegati/SchemaFR.png)  
+![Interfaccia francese](Allegati/SchemaFR.PNG)  
 
 Il menu è diviso in 3 parti prinipali:
 * LINGUA: per passare da una lingua ad un'altra
@@ -252,19 +252,19 @@ SCREEN MENU PROGETTAZIONE
 Per il modello virtuale abbiamo iniziato con un WordClock di base già fatto in un altro progetto.
 Questo si presentava nel seguente modo:  
 
-![Interfaccia iniziale](Allegati/WordClockInizio.png)
+![Interfaccia iniziale](Allegati/WordClockInizio.PNG)
 
 Abbiamo dovuto modificare la struttura im modo da renderla come illustrata nella progettazione:
 
-![Interfaccia italiano](Allegati/It.png)
+![Interfaccia italiano](Allegati/It.PNG)
 
 Per far sì che la tabella delle lettere rimanga al centro abbiamo creato una funzione che la riadatta a dipendenza dello spazio a disposizione: se la finestra è più larga che alta, la tabella si ridimensiona rispetto all'altezza:  
 
-![Orizzontale](Allegati/Orizzontale.png)
+![Orizzontale](Allegati/Orizzontale.PNG)
 
 mentre se la finestra è più alta che larga la tabella si ridimensiona rispetto alla larghezza:  
 
-![Verticale](Allegati/Verticale.png)
+![Verticale](Allegati/Verticale.PNG)
 
 La struttura principale è una tabella 15x13.  
 Ogni riga possiede un id che va da 0 a 120 con intervalli di 10. All'inizio di ogni riga di lettere si trova il pallino dei secondi creato con &#8226.   
@@ -312,7 +312,7 @@ La terza sezione permette di cambiare i colori dell'interfaccia definendo i colo
 
 AGGIORNARE IMG  
 
-![Menu](Allegati/Menu.png)
+![Menu](Allegati/Menu.PNG)
 
 Una volta effettuato il login apparirà nel menu la sezione per poter gesire i LED del modello fisico e in alto a destra appariranno i bottoni per cambiare la password dell'account ed effettuare il logout.
 

@@ -17,7 +17,25 @@ void setup() {
 }
 
 void loop() {
-  
+  setOra();
+  setMinR();
+  setR1();
+  setR2();
+  setR3();
+  setR4();
+  setR5();
+  setR6();
+  setR7();
+  setR8();
+  setR9();
+  setR10();
+  setR11();
+  setR12();
+}
+void setOra(){
+  if(minuti >= 40){
+    ora = ora + 1;  
+  }  
 }
 void pausa(){
   digitalWrite(A0, 0);
@@ -255,13 +273,16 @@ void setR7(){
     c10();
     
   }
+  if(minuti < 40){
+    c14();  
+  }
 }
 void setR8(){
   digitalWrite(A3, 1);
   digitalWrite(A0, 0); //abilito row
   digitalWrite(A1, 1);
   digitalWrite(A2, 0);
-  if(minuti > 32 && minuti < 39){
+  if(minuti >= 35 && minuti < 40){
     c1();
     c2();
     c3();
@@ -287,31 +308,76 @@ void setR9(){
     c3();
     c4();
   }
+  if((minuti > 50 && minuti <= 55) || (minuti >= 5 && minuti < 10)){
+    c9();
+    c10();
+    c11();
+    c12();
+    c13();
+    c14();
+  }
+  
 }
 void setR10(){
   digitalWrite(A3, 1);
   digitalWrite(A0, 0); //abilito row
   digitalWrite(A1, 0);
   digitalWrite(A2, 1);
+  if((minuti > 45 && minuti <= 50) || (minuti >= 10 && minuti < 15)){
+    c1();
+    c2();
+    c3();
+    c4();
+    c5();
+  }
+  else if((minuti > 40 && minuti <= 45) || (minuti >= 15 && minuti < 20)){
+    c6();
+    c7();
+    c8();
+    c9();
+    c10();
+    c11();
+    c12();
+  }
 }
 void setR11(){
   digitalWrite(A3, 1);
   digitalWrite(A0, 1); //abilito row
   digitalWrite(A1, 0);
   digitalWrite(A2, 1);
+  if((minuti == 20) || (minuti >= 20 && minuti < 25)){
+    c1();
+    c2();
+    c3();
+    c4();
+    c5();
+  }
+  else if(minuti >= 30 && minuti < 35){
+    c10();
+    c11();
+    c12();
+    c13();
+    c14(); 
+  }
 }
 void setR12(){
   digitalWrite(A3, 1);
   digitalWrite(A0, 0); //abilito row
   digitalWrite(A1, 1);
   digitalWrite(A2, 1);
+  if(minuti >= 25 && minuti < 30){
+    c4();
+    c5();
+    c6();
+    c7();
+    c8();
+    c9();
+    c10();
+    c11();
+    c12(); 
+  }
 }
-void setR13(){
-  digitalWrite(A3, 1);
-  digitalWrite(A0, 1); //abilito row
-  digitalWrite(A1, 1);
-  digitalWrite(A2, 1);
-}
+
 void c1(){
   digitalWrite(6, 1);
   digitalWrite(7, 0);

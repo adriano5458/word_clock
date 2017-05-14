@@ -652,7 +652,8 @@ per la parte di elettrotecnica ed elettronica digitale, ad esempio in
 quest'ultima molte cose le abbiamo viste in teoria ma mai messe in pratica.
 (samuel)
 
-
+Questo progetto è stato interessante in molti punti di vista perché è composto da due parti quella virtuale e quella fisica dunque si può mettere insieme le proprie capacita apprese in questi anni in materie diverse come la programmazione e l’elettronica. Mi sarebbe piaciuto vedere il progetto completamente finito.
+(Massimo)
 <<<<<<< HEAD
 (parte Alessandro)
 

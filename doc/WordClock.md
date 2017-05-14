@@ -656,9 +656,11 @@ Questo progetto è stato interessante in molti punti di vista perché è compost
 (Massimo)
 <<<<<<< HEAD
 (parte Alessandro)
-
-(parte Loris)
-
+  
+Il progetto è stato interessante per la logica che ci sta dietro. Il progetto è un buon esempio di interazione tra una parte fisica ed una virtuale.  
+Io ho lavorato principalmente nella parte virtuale e mi sarebbe piaciuto vedere anche l'aspetto del collegamento con il modello fisico, ma non è stato possibile per via del tempo a disposizione.  
+Posso comunque affermare di aver imparato molto da questo progetto.  
+  
 (parte Samuel)
 
 (parte Massimo)

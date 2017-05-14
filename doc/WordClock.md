@@ -411,8 +411,6 @@ La prima sezione è quella della lingua. In questa sezione si può passare dalla
 La seconda sezione permette di cambiare i colori dell'interfaccia tramite tre temi predefiniti.  
 La terza sezione permette di cambiare i colori dell'interfaccia definendo i colori dello sfondo, delle lettere accese e di quelle spente, tramite degli input RGB.
 
-AGGIORNARE IMG  
-
 ![Menu](Allegati/Menu.PNG)
 
 Una volta effettuato il login apparirà nel menu la sezione per poter gesire i LED del modello fisico e in alto a destra appariranno i bottoni per cambiare la password dell'account ed effettuare il logout.
@@ -530,28 +528,11 @@ sono arancioni.
 | **Descrizione**      | Effettuare il login e testare l'accensione dei LED tramite il modello virtuale                                                                                                                                                                                                          |
 | **Prerequisiti**     |                                                                                                                                                                                                                                                                                         |
 | **Procedura**        | 1. Cliccare sul pulsante di login in alto a destra.  2. Mettere le credenziali.  <br>3. Cliccare sulle lettere  per cambiarne lo stato e verificare che lo stato cambi pure nel modello fisico.<br>4. Provare ad accendere tutti i LED del modello fisico tramite interfaccia virtuale. |
-| **Risultati attesi** | Cambiando lo stato di una lettera nel modello virtuale, viene cambiato lo stato di quella stessa lettera pure nel modello fisico.                                                                                                                                                       |
-
-| Test Case            | TC-004    |
-|:---------------------|:----------|
-| **Nome**             |           |
-| **Riferimento**      | REQ-0     |
-| **Descrizione**      |           |
-| **Prerequisiti**     |           |
-| **Procedura**        |           |
-| **Risultati attesi** | risultati |
-
-| Test Case            | TC-005    |
-|:---------------------|:----------|
-| **Nome**             |           |
-| **Riferimento**      | REQ-0     |
-| **Descrizione**      |           |
-| **Prerequisiti**     |           |
-| **Procedura**        |           |
-| **Risultati attesi** | risultati |
-
+| **Risultati attesi** | Cambiando lo stato di una lettera nel modello virtuale, viene cambiato lo stato di quella stessa lettera pure nel modello fisico.                                                                                                                                                       
 
 ### Risultati test
+
+![Risultati](Allegati/RisultatiTest.PNG)
 
 ### Problemi riscontrati
 
@@ -597,9 +578,16 @@ durata più del previsto.
 
 ## Consuntivo
 
-Consuntivo del tempo di lavoro effettivo e considerazioni riguardo le
-differenze rispetto alla pianificazione (cap 1.7) (ad esempio Gannt
-consuntivo).
+![Consuntivo](Allegati/GanttConsuntivo.png)
+
+Questo è il diagramma di Gantt consuntivo, viene dimostrato che ci è stato un ritardo nella fase d'implementazione dell'applicativo, le attività che sono durate più del previsto sono quelle messe in evidenza con il colore azzurro. Abbiamo perso tempo sopratutto nel realizzare il modello fisico ed abbiamo riscontrato complicazioni
+nello svillupare il codice per il funzionamento del tutto.
+
+| Costi orari   | 50.-                |
+|---------------|---------------------|
+| Lavoratori    | 5 persone           |
+| Ore di lavoro | 100 ore              |
+|**Totale**     | 25'000.-             |
 
 ## Conclusioni
 
@@ -630,8 +618,11 @@ elettronici.(Carlo)
 
 
 (parte Alessandro)
+
 (parte Loris)
+
 (parte Samuel)
+
 (parte Massimo)
 
 ## Bibliografia

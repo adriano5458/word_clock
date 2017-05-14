@@ -1,6 +1,9 @@
-/**
- * Created by Jeremy Jornod on 16.12.2016.
- */
+/** ----------------------------------------- **\
+ *  @file     WordClock French Version
+ *
+ *  @date     12.05.2017
+ *  @author   Alessandro Narciso & Loris Bruno
+\** ----------------------------------------- **/
 var loop;
 $(document).ready(function() {
 

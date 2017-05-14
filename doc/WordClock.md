@@ -436,12 +436,8 @@ input RGB.
 
 Una volta effettuato il login apparirà nel menu la sezione per poter gesire i
 LED del modello fisico e in alto a destra appariranno i bottoni per cambiare la
-password dell'account ed effettuare il logout.
-
-IMG SEZIONE MANAGEMENT
-
-IMG BOTTONI LOGOUT E CAMBIO PWD
-
+password dell'account ed effettuare il logout.  
+  
 ### Modello fisico
 
 Per la costruzione dello `scheletro` del wordclock se ne è occupato il nostro
@@ -659,7 +655,7 @@ Questo progetto è stato interessante in molti punti di vista perché è compost
   
 Il progetto è stato interessante per la logica che ci sta dietro. Il progetto è un buon esempio di interazione tra una parte fisica ed una virtuale.  
 Io ho lavorato principalmente nella parte virtuale e mi sarebbe piaciuto vedere anche l'aspetto del collegamento con il modello fisico, ma non è stato possibile per via del tempo a disposizione.  
-Posso comunque affermare di aver imparato molto da questo progetto.  
+Posso comunque affermare di aver imparato molto da questo progetto. (Loris)  
   
 (parte Samuel)
 

@@ -154,7 +154,7 @@ transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-/* THEME 1 DIOCANE */
+/* THEME 1 */
 .btn-theme1,
 .btn-theme1:focus, .btn-theme1.focus, .btn-theme1:active, .btn-theme1.active, .open > .dropdown-toggle.btn-theme1,
 .btn-theme1:active:hover,

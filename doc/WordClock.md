@@ -437,7 +437,7 @@ input RGB.
 Una volta effettuato il login apparirà nel menu la sezione per poter gesire i
 LED del modello fisico e in alto a destra appariranno i bottoni per cambiare la
 password dell'account ed effettuare il logout.  
-  
+
 ### Modello fisico
 
 Per la costruzione dello `scheletro` del wordclock se ne è occupato il nostro
@@ -613,7 +613,7 @@ nello svillupare il codice per il funzionamento del tutto.
 |---------------|---------------------|
 | Lavoratori    | 5 persone           |
 | Ore di lavoro | 100 ore              |
-|**Totale**     | 5'000.-             |
+|**Totale**     | 25'000.-             |
 
 ## Conclusioni
 
@@ -637,7 +637,7 @@ vedere come si comporta quando sarà tutto completo.
 Questo progetto mi è servito molto ad affinare le capacità di lavoro con i vari
 linguaggi di programmazione, ho scoperto molte cose in questo progetto di cui
 l'utilizzo di Arduino Ethernet ed il funzionamento di alcuni componenti
-elettronici. (carlo)
+elettronici. (Carlo)
 
 Questo progetto é stato interessante sotto molti punti di vista, soprattutto
 per la parte di progettazione e di raccolta di informazioni. Purtroppo abbiamo
@@ -646,28 +646,31 @@ Comunque siamo riusciti a mettere in pratica un po' tutto quello che abbiamo
 imparato nel corso di questi tre anni scolastici in particolar modo
 per la parte di elettrotecnica ed elettronica digitale, ad esempio in
 quest'ultima molte cose le abbiamo viste in teoria ma mai messe in pratica.
-(samuel)
+(Samuel)
 
 Questo progetto è stato interessante in molti punti di vista perché è composto da due parti quella virtuale e quella fisica dunque si può mettere insieme le proprie capacita apprese in questi anni in materie diverse come la programmazione e l’elettronica. Mi sarebbe piaciuto vedere il progetto completamente finito.
 (Massimo)
-<<<<<<< HEAD
-(parte Alessandro)
-  
+
 Il progetto è stato interessante per la logica che ci sta dietro. Il progetto è un buon esempio di interazione tra una parte fisica ed una virtuale.  
 Io ho lavorato principalmente nella parte virtuale e mi sarebbe piaciuto vedere anche l'aspetto del collegamento con il modello fisico, ma non è stato possibile per via del tempo a disposizione.  
 Posso comunque affermare di aver imparato molto da questo progetto. (Loris)  
-  
-(parte Samuel)
 
-(parte Massimo)
-=======
->>>>>>> 6213f15a788c14b1d04e37b2a037b0eb3b588bc7
+Il lavoro svolto mi è servito molto per affinare le mie capacità riguardanti
+la realizzazione dei siti web. Mi è dispiaciuto molto che non siamo riusciti
+ad implementare il collegamento fisico-virtuale poiché sarebbe stato interessante
+per me vedere che sarebbe andato a funzionare il tutto. (Alessandro)
+
 
 ## Bibliografia
 
 ### Sitografia
 
--   http://www.ganttproject.biz/, *GanttProject*, 07-06-2008.
+-   http://www.ganttproject.biz/, *GanttProject*, 03.02.2017.
+-   http://www.w3schools.com/, *Consigli programmazione*, 24.02.2017
+-   https://products.office.com/en-us/visio/flowchart-software, *Microsoft Visio 2016*, 10.03.2017
+-   https://www.arduino.cc/, *Consigli Arduino*, 07.04.2017-05.05.2017
+-   http://www.adobe.com/ch_it/products/photoshop.html, *Photoshop*, 21.04.2017
+-   http://www.alldatasheet.com/, *Datasheets*, 03.02.2017-21.04.2017
 
 
 ## Allegati

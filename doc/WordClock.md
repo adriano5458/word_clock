@@ -282,7 +282,7 @@ e `2` per l'`INH` dei vari demultiplexer. Tutte gli ingressi sono condivisi
 tra i due demultiplexer sulla stessa base. I selettori sono condivisi, il dato è
 condiviso e l'`INH` viene negato al secondo demultiplexer.
 
-![Modello fisico](Allegati/circuit.svg)
+![Modello fisico](Allegati/circuit.png)
 
 ### Design delle interfacce
 

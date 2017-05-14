@@ -79,7 +79,7 @@ Docente responsabile:
 
 Data di inizio: 27.01.2017
 
-Data di fine: 11.05.2017
+Data di fine: 12.05.2017
 
 ### Abstract
 
@@ -101,6 +101,7 @@ essere presente in due modelli, uno fisico ed uno virtuale. Su quello fisico
 verrà mostrata l'ora scritta con delle parole retroilluminate, questo sarà
 controllato da quello virtuale sul quale verrà mostrata l'ora come nel modello
 fisico. La parte fisica deve sincronizzarsi alla parte virtuale tramite Wi-Fi.
+
 
 ## Analisi
 
@@ -230,7 +231,7 @@ Sono previsite 100 ore lavorative, per un totale di 5000 CHF.
 Nell'immagine sovrastante è rappresenatato la versione fisica del Word Clock,
 nelle varie celle verranno visualizzate le lettere necessarie. Le misure prese
 sono quelle imposte nel mandato. Il contenitore è composto principalmente di
-compensato a parte le sue separazioni all'interno che sono di poli(qualcosa),
+compensato a parte le sue separazioni all'interno che sono di policarbonato,
 quest'ultimo è stato usato per rendere il tutto più flessibile in modo da
 prevenire eventuali incidenti.
 
@@ -287,9 +288,15 @@ condiviso e l'`INH` viene negato al secondo demultiplexer.
 
 Nel modello virtuale l'interfaccia grafica si presenta nel seguente modo:
 * Al centro si trova l'orologio a parole.  
-* Alla sinisra di questo ci sono i pallini che indicano i secondi. Ogni pallino equivale a 5 secondi; il pallino più in alto è 5 secondi.  
-* Sopra alle lettere c'è l'indicatore dei minuti. Il più e il meno indicano se aggiungere o togliere minuti all'orario letto dalle parole. Ogni pallino vale 1 minuto; il pallino più a sinistra indica che si deve aggiungere/togliere 1 minuto, mentre quello più a destra indica che si devono aggiungere/togliere 4 minuti.  
-* In alto a sinistra si trova il menu, nel quale si potrà modificare la lingua e i colori dell'interfaccia. Ci saranno dei temi già preimpostati.
+* Alla sinisra di questo ci sono i pallini che indicano i secondi. Ogni pallino
+equivale a 5 secondi; il pallino più in alto è 5 secondi.  
+* Sopra alle lettere c'è l'indicatore dei minuti. Il più e il meno indicano se
+aggiungere o togliere minuti all'orario letto dalle parole. Ogni pallino vale
+1 minuto; il pallino più a sinistra indica che si deve aggiungere/togliere 1
+minuto, mentre quello più a destra indica che si devono aggiungere/togliere 4
+minuti.  
+* In alto a sinistra si trova il menu, nel quale si potrà modificare la lingua
+e i colori dell'interfaccia. Ci saranno dei temi già preimpostati.
 * In alto a destra si trova il pulsante per effettuare il login/logout.
 
 Questa è l'interfaccia del modello virtuale che verrà visualizzata dall'utente
@@ -312,10 +319,13 @@ Le immagini seguenti mostrano l'interfaccia nelle diverse lingue:
 
 Il menu è diviso in 3 parti prinipali:
 * LINGUA: per passare da una lingua ad un'altra
-* TEMI PREDEFINITI: per impostare i colori dell'interfaccia tramite dei temi preimpostati
+* TEMI PREDEFINITI: per impostare i colori dell'interfaccia tramite dei temi
+preimpostati
 * COLORI PERSONALIZZATI: per impostare i colori dell'interfaccia come si vuole
 
-Una volta effettuato il login apparirà nel menu la voce "Gestisci LED", nella quale si potrà abilitare la gestione dei singoli LED sincronizzati con il modello fisco.
+Una volta effettuato il login apparirà nel menu la voce "Gestisci LED", nella
+quale si potrà abilitare la gestione dei singoli LED sincronizzati con il
+modello fisco.
 
 Questa è l'interfaccia di Login, per accerdere bisognerà inserire username e
 password.
@@ -350,16 +360,20 @@ stata realizzata un'immagine scalare, su misura.
 ## Implementazione
 
 ### Modello virtuale
-Per il modello virtuale abbiamo iniziato con un WordClock di base già fatto in un altro progetto.
+Per il modello virtuale abbiamo iniziato con un WordClock di base già fatto in
+un altro progetto.
 Questo si presentava nel seguente modo:  
 
 ![Interfaccia iniziale](Allegati/WordClockInizio.PNG)
 
-Abbiamo dovuto modificare la struttura im modo da renderla come illustrata nella progettazione:
+Abbiamo dovuto modificare la struttura im modo da renderla come illustrata nella
+progettazione:
 
 ![Interfaccia italiano](Allegati/It.PNG)
 
-Per far sì che la tabella delle lettere rimanga al centro abbiamo creato una funzione che la riadatta a dipendenza dello spazio a disposizione: se la finestra è più larga che alta, la tabella si ridimensiona rispetto all'altezza:  
+Per far sì che la tabella delle lettere rimanga al centro abbiamo creato una
+funzione che la riadatta a dipendenza dello spazio a disposizione: se la
+finestra è più larga che alta, la tabella si ridimensiona rispetto all'altezza:  
 
 ![Orizzontale](Allegati/Orizzontale.PNG)
 
@@ -368,7 +382,8 @@ mentre se la finestra è più alta che larga la tabella si ridimensiona rispetto
 ![Verticale](Allegati/Verticale.PNG)
 
 La struttura principale è una tabella 15x13.  
-Ogni riga possiede un id che va da 0 a 120 con intervalli di 10. All'inizio di ogni riga di lettere si trova il pallino dei secondi creato con &#8226.   
+Ogni riga possiede un id che va da 0 a 120 con intervalli di 10. All'inizio di
+ogni riga di lettere si trova il pallino dei secondi creato con &#8226.   
 Questo è un esempio di riga:  
 
 ```html
@@ -390,7 +405,9 @@ Questo è un esempio di riga:
   <td>A</td>
 </tr>
 ```
-Per "accendere" le lettere che mostrano l'ora attuale abbiamo creato una funzione che riceve come parametri la riga, l'indice da cui iniziare a colorare e quello di fine e il colore da applicare.  
+Per "accendere" le lettere che mostrano l'ora attuale abbiamo creato una
+funzione che riceve come parametri la riga, l'indice da cui iniziare a colorare
+e quello di fine e il colore da applicare.  
 La funzione è la seguente:
 
 ```javascript  
@@ -407,13 +424,19 @@ function genWord(row, min, max, color) {
 ```
 
 Come da progettazione il menu è composto da 3 sezioni.  
-La prima sezione è quella della lingua. In questa sezione si può passare dalla pagina di una lingua a quella di una della altre due disponibili.  
-La seconda sezione permette di cambiare i colori dell'interfaccia tramite tre temi predefiniti.  
-La terza sezione permette di cambiare i colori dell'interfaccia definendo i colori dello sfondo, delle lettere accese e di quelle spente, tramite degli input RGB.
+La prima sezione è quella della lingua. In questa sezione si può passare dalla
+pagina di una lingua a quella di una della altre due disponibili.  
+La seconda sezione permette di cambiare i colori dell'interfaccia tramite tre
+temi predefiniti.  
+La terza sezione permette di cambiare i colori dell'interfaccia definendo i
+colori dello sfondo, delle lettere accese e di quelle spente, tramite degli
+input RGB.
 
 ![Menu](Allegati/Menu.PNG)
 
-Una volta effettuato il login apparirà nel menu la sezione per poter gesire i LED del modello fisico e in alto a destra appariranno i bottoni per cambiare la password dell'account ed effettuare il logout.
+Una volta effettuato il login apparirà nel menu la sezione per poter gesire i
+LED del modello fisico e in alto a destra appariranno i bottoni per cambiare la
+password dell'account ed effettuare il logout.
 
 IMG SEZIONE MANAGEMENT
 
@@ -512,14 +535,14 @@ sono arancioni.
 | **Procedura**        | 1. Nel sito, andare, se non si è già nella pagina del WordClock in italiano tramite il menu sulla sinistra. <br> 2. Controllare che la disposizione delle lettere sia uguale a quella rapresentata nel modello fisico. |
 | **Risultati attesi** | Non ci deve essere nessuna differenza tra i due.                                                                                                                                                                       |
 
-| Test Case            | TC-002                                                                                                                                                                                                                      |
-|:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome**             | Sincronizzazione virtuale-fisico                                                                                                                                                                                            |
-| **Riferimento**      | REQ-003                                                                                                                                                                                                                     |
-| **Descrizione**      | Controllare che il modello fisico e quello virtuale siano sincronizzati                                                                                                                                                     |
-| **Prerequisiti**     | Bisogna essere nella pagina in italiano                                                                                                                                                                                     |
-| **Procedura**        | 1. Nel sito, andare, se non si è già nella pagina del WordClock in italiano tramite il menu sulla sinistra. <br> 2. Controllare che i LED accesi nel modello fisico siano gli stessi che sono colorati nel modello virtuale |
-| **Risultati attesi** | I LED accesi nel modello fisico devono essere gli stessi che sono colorati nel modello virtuale.                                                                                                                            |
+| Test Case            | TC-002                                                                                                                                                                                             |
+|:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**             | Sincronizzazione tra modello virtuale e fisico                                                                                                                                                      |
+| **Riferimento**      | REQ-003                                                                                                                                                                                             |
+| **Descrizione**      | Sincronizzazione con il modello fisico                                                                                                                                                              |
+| **Prerequisiti**     | Il sito e il modello fisico devono potersi comunicare via internet                                                                                                                                  |
+| **Procedura**        | 1. Eseguire il login come amministratore sul modello virtuale<br>2.Modificare l'orario tramite la toolbox apposita.<br>3. Controllare che il modello fisico abbia cambiato effettivamente l'orario. |
+| **Risultati attesi** | L'orario del modello virtuale e del modello fisico devono combaciare.                                                                                                                               |
 
 | Test Case            | TC-003                                                                                                                                                                                                                                                                                  |
 |:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -528,7 +551,17 @@ sono arancioni.
 | **Descrizione**      | Effettuare il login e testare l'accensione dei LED tramite il modello virtuale                                                                                                                                                                                                          |
 | **Prerequisiti**     |                                                                                                                                                                                                                                                                                         |
 | **Procedura**        | 1. Cliccare sul pulsante di login in alto a destra.  2. Mettere le credenziali.  <br>3. Cliccare sulle lettere  per cambiarne lo stato e verificare che lo stato cambi pure nel modello fisico.<br>4. Provare ad accendere tutti i LED del modello fisico tramite interfaccia virtuale. |
-| **Risultati attesi** | Cambiando lo stato di una lettera nel modello virtuale, viene cambiato lo stato di quella stessa lettera pure nel modello fisico.                                                                                                                                                       
+| **Risultati attesi** | Cambiando lo stato di una lettera nel modello virtuale, viene cambiato lo stato di quella stessa lettera pure nel modello fisico.                                                                                                                                                                                                                                                                                                           |                                                                                                  |
+
+| Test Case            | TC-004                                                                                                                                                                                                    |
+|:---------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**             | Controllare che la matrice del modello fisico funzioni                                                                                                                                                      |
+| **Riferimento**      | REQ-002                                                                                                                                                                                                     |
+| **Descrizione**      | Controllo del funzionamento dei led nel modello fisico                                                                                                                                                      |
+| **Prerequisiti**     | Modello fisico, un generatore di corrente (10V, 3A), due cavetti                                                                                                                                            |
+| **Procedura**        | 1.Posizionare il cavetto con il polo positivo sulla prima colonna. <br>2.posizionare il cavetto con il polo negativo sulla prima  riga.<br>3. Ripetere questo procedimento per tutte le colonne e le righe. |
+| **Risultati attesi** | L'illuminazione di un solo led, e che sia il led giusto. Per controllare che il led sia giusto basta controllare che sia quello che si trova all'incrocio tra colonna e riga.                               |
+
 
 ### Risultati test
 
@@ -569,12 +602,9 @@ permetteva solamente il passaggio di corrente.
 
 ### Mancanze/limitazioni conosciute
 
-Il modello virtuale presenta queste limitazioni.
+Non c'è la sincronizzazione tra modello virtuale e modello fisico, ed il modello
+fisico non può essere controllato dal modello virtuale.
 
-Il modello fisico è stato finito ma lo stesso non si può dire del programma che
-si sarebbe dovuto occupare del funzionamento di quest'ultimo. Perciò, è stato
-finito per metà a causa del fatto che la realizzazione del modello fisico è
-durata più del previsto.
 
 ## Consuntivo
 
@@ -587,17 +617,17 @@ nello svillupare il codice per il funzionamento del tutto.
 |---------------|---------------------|
 | Lavoratori    | 5 persone           |
 | Ore di lavoro | 100 ore              |
-|**Totale**     | 25'000.-             |
+|**Totale**     | 5'000.-             |
 
 ## Conclusioni
 
-Siamo molto soddisfatti di dove siamo riusciti ad arrivare con le nostre conoscenze.
-Purtroppo il progetto è completo per metà e mancano un paio di cose importanti.
-Siamo riusciti bene a dividerci il lavoro e quindi non è mai capitato che qualcuno
-rimanesse senza far niente.
-Nella parte di integrazione di Arduino con il sito web abbiamo riscontrato delle
-difficoltà, per questo non abbiamo potuto realizzare molto legato a questo.
-
+Siamo soddisfatti e insoddisfatti al tempo stesso. La soddisfazione deriva dal
+fatto che siamo comunque riusciti a fare gran parte del progetto, specialmente
+per il modello fisico, nonostante alcune difficoltà dovute ad alcuni errori iniziali.
+La insoddisfazione deriva soprattutto per la parte del modello fisico, ci
+abbiamo messo troppo tempo a costruire il modello fisico, e questo ci ha portato
+a trascurare alcuni cose importanti; il controllo del modello fisico tramite
+il modello virtuale e la trasmissione dei dati.
 
 ### Sviluppi futuri
 
@@ -606,17 +636,24 @@ in futuro. Chiaramente l'idea principale di completarlo in modo che tutte
 le opzioni imposte siano portate a termine, perché è molto interessante
 vedere come si comporta quando sarà tutto completo.
 
-
-
 ### Considerazioni personali
 
 Questo progetto mi è servito molto ad affinare le capacità di lavoro con i vari
 linguaggi di programmazione, ho scoperto molte cose in questo progetto di cui
 l'utilizzo di Arduino Ethernet ed il funzionamento di alcuni componenti
-elettronici.(Carlo)
+elettronici. (carlo)
+
+Questo progetto é stato interessante sotto molti punti di vista, soprattutto
+per la parte di progettazione e di raccolta di informazioni. Purtroppo abbiamo
+speso troppo tempo in queste, e di conseguenza non siamo riusciti a finire tutto.
+Comunque siamo riusciti a mettere in pratica un po' tutto quello che abbiamo
+imparato nel corso di questi tre anni scolastici in particolar modo
+per la parte di elettrotecnica ed elettronica digitale, ad esempio in
+quest'ultima molte cose le abbiamo viste in teoria ma mai messe in pratica.
+(samuel)
 
 
-
+<<<<<<< HEAD
 (parte Alessandro)
 
 (parte Loris)
@@ -624,6 +661,8 @@ elettronici.(Carlo)
 (parte Samuel)
 
 (parte Massimo)
+=======
+>>>>>>> 6213f15a788c14b1d04e37b2a037b0eb3b588bc7
 
 ## Bibliografia
 
